@@ -1,0 +1,44 @@
+.main-container {
+  border: 1px solid black;
+  width: 900px;
+  height: 900px;
+  position: relative;
+
+  .img {
+    position: absolute;
+    top: 0; //Sticking it to the top//
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-size: 900px 100%;
+  }
+
+  .background-img {
+    background-image: url(../../images/colors.jpg);
+  }
+
+  .foreground-img {
+    background-image: url(../../images/colors-modified.jpg);
+    border: 3px solid white;
+    width: 100%;
+  }
+
+  #slider {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    -webkit-appearance: none;
+    background-color: transparent;
+
+    //& does direct parent
+    &::-webkit-slider-thumb {
+      cursor: pointer;
+      -webkit-appearance: none;
+      height: 15px;
+      width: 15px;
+      border: 50%;
+      border: 3px solid yellow;
+      background-color: orange;
+    }
+  }
+}
